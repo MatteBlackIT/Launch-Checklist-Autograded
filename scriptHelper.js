@@ -31,13 +31,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     }
  }
 
- if (validateInput(pilot) === 'Empty' || validateInput(copilot) === 'Empty' || validateInput(fuelLevel) === 'Empty' || validateInput(cargoLevel) === 'Empty') {
-    alert("All fields required");
- } else if (validateInput(cargoLevel) === "Not a Number" || (validateInput(fuelLevel) === "Not a Number" ) || (validateInput(pilot) === "Is a Number")) {
-    alert("Error please enter the correct information")
- } else {
 
-}
  
  function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let pilotStatus = document.getElementById('pilotStatus');
@@ -45,7 +39,15 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let fuelStatus = document.getElementById('fuelStatus');
     let cargoStatus = document.getElementById('cargoStatus');
     let launchStatus = document.getElementById('launchStatus');
-    let faultyItems = document.getElementById('faultyItems')
+    let faultyItems = document.getElementById('faultyItems');
+
+    if (validateInput(pilot) === 'Empty' || validateInput(copilot) === 'Empty' || validateInput(fuelLevel) === 'Empty' || validateInput(cargoLevel) === 'Empty') {
+        alert("All fields required");
+     } else if (validateInput(cargoLevel) === "Not a Number" || (validateInput(fuelLevel) === "Not a Number" ) || (validateInput(pilot) === "Is a Number")) {
+        alert("Error please enter the correct information")
+     } else {
+    
+    }
 
 
  
@@ -101,6 +103,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         fuelStatus.innerHTML = "Fuel level too low for launch";
         cargoStatus.innerHTML = "Cargo mass too heavy for launch";
         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
+        
         
 
    

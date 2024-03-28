@@ -1,7 +1,6 @@
 // Write your helper functions here!
 
 
-
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
   // Here is the HTML formatting for our mission target div.
   const div = document.getElementById("missionTarget");
